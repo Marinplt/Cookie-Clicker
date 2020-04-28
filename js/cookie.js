@@ -1,7 +1,6 @@
-//initial number of cookies    
-var num = 0;
+var num = 0; //nbr de cookie au début donc 0
 
-window.onload = function () {
+window.onload = function () {    //fonction pour avoir un pseudo personalisé pour la boulangerie
         var name = prompt("Entre ton pseudo");
         
         var space = document.getElementById("bakery");
@@ -13,34 +12,31 @@ var cookie = document.getElementById("cookie");
 
 function cookieClick() { 
     num += 1;
-
-    var numbers = document.getElementById("numbers");
-    
-    //upgrade level for printing
-    var upgradeLevel = document.getElementById("upgradeLevel");
+    var numbers = document.getElementById("score");
+    var upgradeLevel = document.getElementById("paliers");
     
     numbers.innerHTML = num;      
-    //automatic Granny upgrade to 2x
+    //améliorer au palier grand mere qui multiplie par 2
     if(num >= 30 ){
         num += 2;
         upgradeLevel.innerHTML = "Palier Grand-Mère";
     }
 
-    //automatic factory upgrade to 10x
+    //palier usine qui multiplie par 10
     if(num >= 500) {
         num += 10;
         upgradeLevel.innerHTML = "Palier Usine";
     }
 
-    //automatic plant upgrade to 30x
+    //palier complexe d'usines qui multiplie par 30
     if(num >= 1000) {
         num += 30;
-        upgradeLevel.innerHTML = "Plant Level";
+        upgradeLevel.innerHTML = "Palier complexe d'usines";
     }
 
-    //automatic super factory upgrade to 1000x
+    //usine nucléaire qui multiplie par 1000
     if(num >= 100000) {
         num += 1000;
-        upgradeLevel.innerHTML = "Super-Plant Level";
+        upgradeLevel.innerHTML = "Palier usine nucléaire";
     }
 }
