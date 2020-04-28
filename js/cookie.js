@@ -18,25 +18,25 @@ function cookieClick() {
     numbers.innerHTML = num;      
     //améliorer au palier grand mere qui multiplie par 2
     if(num >= 30 ){
-        num += 2;
+        num += 1;
         upgradeLevel.innerHTML = "Palier Grand-Mère";
     }
 
     //palier usine qui multiplie par 10
     if(num >= 500) {
-        num += 10;
+        num += 8;
         upgradeLevel.innerHTML = "Palier Usine";
     }
 
     //palier complexe d'usines qui multiplie par 30
     if(num >= 1000) {
-        num += 30;
+        num += 20;
         upgradeLevel.innerHTML = "Palier complexe d'usines";
     }
 
     //usine nucléaire qui multiplie par 1000
     if(num >= 100000) {
-        num += 1000;
+        num += 970;
         upgradeLevel.innerHTML = "Palier usine nucléaire";
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="js/cookie.js"></script>
+        
         <title>Oreo Clicker by Marin POLLET</title>
         <link rel="stylesheet" href="style.css">
 
@@ -10,7 +10,7 @@
         <div id="bakery"></div> <!-- nom de la boulangerie ! -->
 
         <div id="cookie" onclick="cookieClick()">  <!-- fontion qui compte le nombre de clics -->
-            <img src="http://clipart-library.com/img1/1150945.png" width="300px">  <!-- petit gif d'oreo -->
+            <img src="http://clipart-library.com/img1/1150945.png" width="300px">  <!-- petite image de cookie -->
         </div>
 
         <p>Nombre de cookies :</p>
@@ -24,34 +24,40 @@
         <table id="table">
             <tr>
                 <td>Nom</td>
-                <td>Description du palier</td>
+                <td>Multiplicateur</td>
                 <td>Palier</td>
+                <td>Cliquez pour améliorer</td>
             </tr>
             
             <tr>
                 <td>Grand-Mère</td>
-                <td>Grand-Mère fait 2x plus de cookies !</td>
+                <td>Produit 2x plus</td>
                 <td>30 cookies !</td>
+                <td><button onclick="upgrade()">Améliorer</button></td>
             </tr>
             
             <tr>
                 <td>Usine</td>
-                <td>L'usine produit 10x plus de cookies !</td>
+                <td>Produit 10x plus</td>
                 <td>500 cookies !</td>
+                <td onclick="upgrade()">Améliorer</td>
             </tr>
             
             <tr>
-                <td>Plant</td>
-                <td> Plant makes 30x's as much!</td>
+                <td>Complexe d'usines</td>
+                <td>Produit 30x plus</td>
                 <td>1,000 cookies!</td>
+                <td onclick="upgrade()">Améliorer</td>
             </tr>
             
              <tr>
                 <td>SuperPlant</td>
-                <td> SuperFactory makes 1000x's as much!</td>
+                <td>Produit 1000x plus</td>
                 <td>100,000 cookies!</td>
+                <td onclick="upgrade()">Améliorer</td>
             </tr>
 
         </table>
+        <script type="text/javascript" src="js/cookie.js"></script>
     </body>
 </html>
