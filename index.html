@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="js/cookie.js"></script>
-        <title>Cookie Clicker by Marin POLLET</title>
-        <link rel="stylesheet" href="style.css">
+<html class="Montserrat">
 
-    </head>
-    <body>
-        <div id="bakery"></div> <!-- nom de la boulangerie ! -->
-        <p id="cookiesPerSecond">You are gaining 0 cookies per/s</p>
-        <a href="#" onclick="add()"><img src="images/cookie.png" width="200px" height="201px"></a>
-        <br><br>
-        You got : <input type="text" id="text" value=0 disabled> Cookies.
-        <br><br>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/bitcoin.js"></script>
+    <title>Bitcoin Miner by Marin POLLET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <button><a href="#" onclick="save()">Save</a></button>
-        <button><a href="#" onclick="load()">Load</a></button>
+<body>
+    <h1 class="center">Bitcoin Miner</h1>
 
-        <p>Buy 1 Auto Clicker</p>
-        <button><a href="#" onclick="buyAutoClick()"><img src="images/mouse-hover.png" width="30px" height="40px"></a></button>
-        <p id="costAutoClick"> Cookies</p>
-        <p id="ammountAutoClick">You own 0 Auto Clickers</p>
+    <a href="#" onclick="add()"><img src="images/bitcoin.png" id="image"></a>
+
+    <div id="infos">
+        <input type="text" id="text" class="Montserrat" value=0 disabled> Bitcoins.</input>
+
+        <p id="bitcoinPerSecond">Vous gagnez 0 bitcoins par seconde</p>
+
+        <button class="saveloadmulti" onclick="save()"><a class="txtdecnone" href="#">Sauvegarder</a></button>
+
+        <button class="saveloadmulti" onclick="load()"><a class="txtdecnone" href="#">Charger</a></button>
+
+        <p id="currentMultiplier">Multiplicateur actuel : x1</p>
+    </div>
+    <div id="boutique">
+        <p id="ammountMultiplier">Prochaine amélioration : x2</p>
+        <button class="saveloadmulti" onclick="buyMultiplier()"><a class="txtdecnone" href="#"><span
+                    id="ammountMultiplier2">x2</span></a></button>
+        <p id="costMultiplier">200 Bitcoins</p>
         <br>
-        <p>Buy 1 farm</p>
-        <button><a href="#" onclick="buyFarm()"><img src="images/farm.png" width="40px" height="40px"></a></button>
-        <p id="costFarm">15 cookies</p>
-        <p id="ammountFarms">You own 1 Farms</p>
+        <p>Acheter 1 PC</p>
+        <button class="upgrades" onclick="buyPC()"><a href="#"><img src="images/pc.png" width="90px" height="90px"></a></button>
+        <p id="costPC"> Bitcoins</p>
+        <p id="ammountPC">Vous possédez 0 PC</p>
+        <br>
+        <p>Acheter 1 Serveur</p>
+        <button class="upgrades" onclick="buyServer()"><a href="#"><img src="images/server.png" width="90px" height="90px"></a></button>
+        <p id="costServer"> Bitcoins</p>
+        <p id="ammountServers">Vous possédez 0 Serveurs</p>
+    </div>
+</body>
 
-    </body>
 </html>

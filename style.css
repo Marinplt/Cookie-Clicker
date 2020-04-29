@@ -1,4 +1,90 @@
-#text{
-    text-align: center;
+html {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    color: white;
 }
 
+.Montserrat {
+    font-family: 'Montserrat';
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    left: 470px;
+    bottom: 650px;
+}
+
+h1 {
+    font-size: 150px;
+    font-family: 'MontserratThin';
+}
+
+.saveloadmulti {
+    background-color: rgb(105, 105, 104);
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 70px;
+    font-size: 20px;
+}
+
+.upgrades{
+    background-color: rgb(105, 105, 104);
+    border-radius: 5px;
+    border: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.txtdecnone {
+    text-decoration: none;
+    color: #edc56e;
+}
+
+#text {
+    color: #edc56e;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    font-size: 60px;
+    max-width: 500px;
+}
+
+#infos {
+    margin-top: 350px;
+    float: left;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    /* background-color: rgba(51, 51, 51, 0.493); */
+}
+
+#boutique{
+    float: right;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    /* background-color: rgba(51, 51, 51, 0.493); */
+}
+
+#image {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/montserrat-regular-webfont.woff2') format('woff2'), url('font/montserrat-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MontserratThin';
+    src: url('font/montserrat-thin-webfont.woff2') format('woff2'), url('font/montserrat-thin-webfont.woff') format('woff');
+}
