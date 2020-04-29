@@ -1,42 +1,61 @@
-var num = 0; //nbr de cookie au début donc 0
-
-window.onload = function () {    //fonction pour avoir un pseudo personalisé pour la boulangerie
-        var name = prompt("Entre ton pseudo");
-        
-        var space = document.getElementById("bakery");
-        
-        space.innerHTML = "Boulangerie de " + name;
-}
-
-var cookie = document.getElementById("cookie");
-
-function cookieClick() { 
-    num += 1;
-    var numbers = document.getElementById("score");
-    var upgradeLevel = document.getElementById("paliers");
+/* window.onload = function () {    //fonction pour avoir un pseudo personalisé pour la boulangerie
+    var name = prompt("Entre ton pseudo");
     
-    numbers.innerHTML = num;      
-    //améliorer au palier grand mere qui multiplie par 2
-    if(num >= 30 ){
-        num += 1;
-        upgradeLevel.innerHTML = "Palier Grand-Mère";
+    var space = document.getElementById("bakery");
+    
+    space.innerHTML = "Boulangerie de " + name;
+} */
+var cookieCount = 0;
+var autoClick = 0;
+var farms = 0;
+var multiplier = 1;
+function add(){
+    cookieCount += 1;
+    update()
+}
+function save(){
+    localStorage.setItem("cookieCount", cookieCount);
+    localStorage.setItem("autoClick", autoClick);
+    localStorage.setItem("farms", farms);
+}
+function load(){
+    cookieCount = localStorage.getItem("cookieCount");
+    cookieCount = parseInt(cookieCount);
+    autoClick = localStorage.getItem("autoClick");
+    autoClick = parseInt(autoClick);
+    farms = localStorage.getItem("farms");
+    farms = parseInt(farms);
+    update()
+}
+function timer(){
+    cookieCount = cookieCount + autoClick;
+    cookieCount = cookieCount + farms * 2;
+    update()
+}
+setInterval(timer, 1000);
+function buyAutoClick(){
+    if(cookieCount >= ((autoClick + 1 )* 12)){
+        cookieCount = cookieCount - ((autoClick + 1) * 12);
+        autoClick += 1;
+        update()
     }
+}
+function update(){
+    document.getElementById('text').value = cookieCount;
+    document.title = cookieCount + " Cookies";
+    
+    document.getElementById("ammountAutoClick").innerHTML = "You own " + autoClick + " Auto clickers.";
+    document.getElementById('costAutoClick').innerHTML = ((autoClick + 1) * 12) + " Cookies";
+    
+    document.getElementById("ammountFarms").innerHTML = "You own " + farms + " Farms";
+    document.getElementById("costFarm").innerHTML = ((farms + 1) * 15) + " Cookies";
 
-    //palier usine qui multiplie par 10
-    if(num >= 500) {
-        num += 8;
-        upgradeLevel.innerHTML = "Palier Usine";
-    }
-
-    //palier complexe d'usines qui multiplie par 30
-    if(num >= 1000) {
-        num += 20;
-        upgradeLevel.innerHTML = "Palier complexe d'usines";
-    }
-
-    //usine nucléaire qui multiplie par 1000
-    if(num >= 100000) {
-        num += 970;
-        upgradeLevel.innerHTML = "Palier usine nucléaire";
+    document.getElementById("cookiesPerSecond").innerHTML = "You are gaining " + (((autoClick) + (farms * 2)) * multiplier) + " Cookies per/s";
+}
+function buyFarm(){
+    if (cookieCount >= ((farms + 1) * 15)){
+        cookieCount = cookieCount - ((farms + 1) * 15);
+        farms += 1;
+        update()
     }
 }

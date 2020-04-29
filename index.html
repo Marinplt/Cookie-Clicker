@@ -1,63 +1,31 @@
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
-        
-        <title>Oreo Clicker by Marin POLLET</title>
+        <script type="text/javascript" src="js/cookie.js"></script>
+        <title>Cookie Clicker by Marin POLLET</title>
         <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
         <div id="bakery"></div> <!-- nom de la boulangerie ! -->
+        <p id="cookiesPerSecond">You are gaining 0 cookies per/s</p>
+        <a href="#" onclick="add()"><img src="images/cookie.png" width="200px" height="201px"></a>
+        <br><br>
+        You got : <input type="text" id="text" value=0 disabled> Cookies.
+        <br><br>
 
-        <div id="cookie" onclick="cookieClick()">  <!-- fontion qui compte le nombre de clics -->
-            <img src="http://clipart-library.com/img1/1150945.png" width="300px">  <!-- petite image de cookie -->
-        </div>
+        <button><a href="#" onclick="save()">Save</a></button>
+        <button><a href="#" onclick="load()">Load</a></button>
 
-        <p>Nombre de cookies :</p>
-        
-        <div id = "score"></div>
-        <div id= "paliers"></div>
+        <p>Buy 1 Auto Clicker</p>
+        <button><a href="#" onclick="buyAutoClick()"><img src="images/mouse-hover.png" width="30px" height="40px"></a></button>
+        <p id="costAutoClick"> Cookies</p>
+        <p id="ammountAutoClick">You own 0 Auto Clickers</p>
+        <br>
+        <p>Buy 1 farm</p>
+        <button><a href="#" onclick="buyFarm()"><img src="images/farm.png" width="40px" height="40px"></a></button>
+        <p id="costFarm">15 cookies</p>
+        <p id="ammountFarms">You own 1 Farms</p>
 
-        <p>Intructions: Cliquez sur le cookier pour faire plus de cookies.</p>
-        <p>Les améliorations se font automatiquement une fois que vous avez atteint les paliers du tableau ci-dessous :)</p>
-
-        <table id="table">
-            <tr>
-                <td>Nom</td>
-                <td>Multiplicateur</td>
-                <td>Palier</td>
-                <td>Cliquez pour améliorer</td>
-            </tr>
-            
-            <tr>
-                <td>Grand-Mère</td>
-                <td>Produit 2x plus</td>
-                <td>30 cookies !</td>
-                <td><button onclick="upgrade()">Améliorer</button></td>
-            </tr>
-            
-            <tr>
-                <td>Usine</td>
-                <td>Produit 10x plus</td>
-                <td>500 cookies !</td>
-                <td onclick="upgrade()">Améliorer</td>
-            </tr>
-            
-            <tr>
-                <td>Complexe d'usines</td>
-                <td>Produit 30x plus</td>
-                <td>1,000 cookies!</td>
-                <td onclick="upgrade()">Améliorer</td>
-            </tr>
-            
-             <tr>
-                <td>SuperPlant</td>
-                <td>Produit 1000x plus</td>
-                <td>100,000 cookies!</td>
-                <td onclick="upgrade()">Améliorer</td>
-            </tr>
-
-        </table>
-        <script type="text/javascript" src="js/cookie.js"></script>
     </body>
 </html>
