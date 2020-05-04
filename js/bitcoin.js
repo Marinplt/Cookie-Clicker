@@ -40,25 +40,26 @@ function buyPC() {
     }
 }
 function update() {
-    document.getElementById('text').value = bitcoinCount;
+    $("#text")[0].value = bitcoinCount;
+    console.log($("text"));
     document.title = bitcoinCount + " Bitcoins";
 
     //Multiplicateur 
-    document.getElementById("ammountMultiplier").innerHTML = "Prochaine amélioration : x" + (multiplier + 1);
-    document.getElementById("ammountMultiplier2").innerHTML = "x" + (multiplier + 1);
-    document.getElementById("costMultiplier").innerHTML = "Prix : " + ((multiplier + 1) * 100) + " Bitcoins";
-    document.getElementById("currentMultiplier").innerHTML = "Multiplicateur actuel : x" + (multiplier);
+    $("#ammountMultiplier")[0].innerHTML = "Prochaine amélioration : x" + (multiplier + 1);
+    $("#ammountMultiplier2")[0].innerHTML = "x" + (multiplier + 1);
+    $("#costMultiplier")[0].innerHTML = "Prix : " + ((multiplier + 1) * 100) + " Bitcoins";
+    $("#currentMultiplier")[0].innerHTML = "Multiplicateur actuel : x" + (multiplier);
 
     //Mauvais pc
-    document.getElementById("ammountPC").innerHTML = "Vous possédez " + PC + " PC";
-    document.getElementById('costPC').innerHTML = "Prix : " + ((PC + 1) * 15) + " Bitcoins";
+    $("#ammountPC")[0].innerHTML = "Vous possédez " + PC + " PC";
+    $("#costPC")[0].innerHTML = "Prix : " + ((PC + 1) * 15) + " Bitcoins";
 
     //Serveurs
-    document.getElementById("ammountServers").innerHTML = "Vous possédez " + servers + " Serveurs";
-    document.getElementById("costServer").innerHTML = "Prix : " + ((servers + 1) * 30) + " Bitcoins";
+    $("#ammountServers")[0].innerHTML = "Vous possédez " + servers + " Serveurs";
+    $("#costServer")[0].innerHTML = "Prix : " + ((servers + 1) * 30) + " Bitcoins";
 
     //Bitcoins par seconde
-    document.getElementById("bitcoinPerSecond").innerHTML = "Vous gagnez " + (((PC) + (servers * 2)) * multiplier) + " Bitcoins par seconde";
+    $("#bitcoinPerSecond")[0].innerHTML = "Vous gagnez " + (((PC) + (servers * 2)) * multiplier) + " Bitcoins par seconde";
 }
 function buyServer() {
     if (bitcoinCount >= ((servers + 1) * 30)) {

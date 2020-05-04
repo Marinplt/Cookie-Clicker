@@ -33,12 +33,10 @@ html {
 #text {
     color: #edc56e;
     text-align: center;
-    background: -webkit-repeating-linear-gradient(#edc56e, #99652b);
+    background-color: transparent;
     border: 0;
     font-size: 60px;
     max-width: 500px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 #infos {
@@ -55,7 +53,7 @@ html {
     font-size: 20px;
     padding: 20px;
     border-radius: 10px;
-    /* background-color: rgba(51, 51, 51, 0.493); */
+    background-color: rgba(51, 51, 51, 0.493);
 }
 
 #image {
