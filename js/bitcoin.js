@@ -46,16 +46,16 @@ function update() {
     //Multiplicateur 
     document.getElementById("ammountMultiplier").innerHTML = "Prochaine amélioration : x" + (multiplier + 1);
     document.getElementById("ammountMultiplier2").innerHTML = "x" + (multiplier + 1);
-    document.getElementById("costMultiplier").innerHTML = ((multiplier + 1) * 100) + " Bitcoins";
+    document.getElementById("costMultiplier").innerHTML = "Prix : " + ((multiplier + 1) * 100) + " Bitcoins";
     document.getElementById("currentMultiplier").innerHTML = "Multiplicateur actuel : x" + (multiplier);
 
     //Mauvais pc
     document.getElementById("ammountPC").innerHTML = "Vous possédez " + PC + " PC";
-    document.getElementById('costPC').innerHTML = ((PC + 1) * 15) + " Bitcoins";
+    document.getElementById('costPC').innerHTML = "Prix : " + ((PC + 1) * 15) + " Bitcoins";
 
     //Serveurs
     document.getElementById("ammountServers").innerHTML = "Vous possédez " + servers + " Serveurs";
-    document.getElementById("costServer").innerHTML = ((servers + 1) * 30) + " Bitcoins";
+    document.getElementById("costServer").innerHTML = "Prix : " + ((servers + 1) * 30) + " Bitcoins";
 
     //Bitcoins par seconde
     document.getElementById("bitcoinPerSecond").innerHTML = "Vous gagnez " + (((PC) + (servers * 2)) * multiplier) + " Bitcoins par seconde";

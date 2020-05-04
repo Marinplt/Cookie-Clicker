@@ -8,18 +8,6 @@ html {
     font-family: 'Montserrat';
 }
 
-.center {
-    position: absolute;
-    margin: auto;
-    left: 470px;
-    bottom: 650px;
-}
-
-h1 {
-    font-size: 150px;
-    font-family: 'MontserratThin';
-}
-
 .saveloadmulti {
     background-color: rgb(105, 105, 104);
     border: 0;
@@ -45,10 +33,12 @@ h1 {
 #text {
     color: #edc56e;
     text-align: center;
-    background-color: transparent;
+    background: -webkit-repeating-linear-gradient(#edc56e, #99652b);
     border: 0;
     font-size: 60px;
     max-width: 500px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #infos {

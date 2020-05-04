@@ -9,12 +9,11 @@
 </head>
 
 <body>
-    <h1 class="center">Bitcoin Miner</h1>
-
     <a href="#" onclick="add()"><img src="images/bitcoin.png" id="image"></a>
 
     <div id="infos">
-        <input type="text" id="text" class="Montserrat" value=0 disabled> Bitcoins.</input>
+        <p class="Montserrat">Nombre de Bitcoins actuels :</p>
+        <input type="text" id="text" class="Montserrat" value=0 disabled></input>
 
         <p id="bitcoinPerSecond">Vous gagnez 0 bitcoins par seconde</p>
 
@@ -24,20 +23,22 @@
 
         <p id="currentMultiplier">Multiplicateur actuel : x1</p>
     </div>
+
     <div id="boutique">
         <p id="ammountMultiplier">Prochaine amélioration : x2</p>
-        <button class="saveloadmulti" onclick="buyMultiplier()"><a class="txtdecnone" href="#"><span
-                    id="ammountMultiplier2">x2</span></a></button>
-        <p id="costMultiplier">200 Bitcoins</p>
+        <button class="saveloadmulti" onclick="buyMultiplier()"><a class="txtdecnone" href="#"><span id="ammountMultiplier2">x2</span></a></button>
+        <p id="costMultiplier">Prix : 200 Bitcoins</p>
         <br>
+        
         <p>Acheter 1 PC</p>
         <button class="upgrades" onclick="buyPC()"><a href="#"><img src="images/pc.png" width="90px" height="90px"></a></button>
-        <p id="costPC"> Bitcoins</p>
+        <p id="costPC">Prix : 15 Bitcoins</p>
         <p id="ammountPC">Vous possédez 0 PC</p>
         <br>
+
         <p>Acheter 1 Serveur</p>
         <button class="upgrades" onclick="buyServer()"><a href="#"><img src="images/server.png" width="90px" height="90px"></a></button>
-        <p id="costServer"> Bitcoins</p>
+        <p id="costServer">Prix : 30 Bitcoins</p>
         <p id="ammountServers">Vous possédez 0 Serveurs</p>
     </div>
 </body>
