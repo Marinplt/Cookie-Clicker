@@ -1,3 +1,12 @@
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    html{
+        background-image: url(images/backgroundmobile.jpg);
+        background-size: auto;
+    }
+}
 html {
     background-image: url(images/background.jpg);
     background-size: cover;
@@ -40,12 +49,12 @@ html {
 }
 
 #infos {
-    margin-top: 350px;
+    margin-top: 4%;
     float: left;
     padding: 20px;
-    border-radius: 10px;
     font-size: 30px;
-    /* background-color: rgba(51, 51, 51, 0.493); */
+    /*border-radius: 10px;
+    background-color: rgba(51, 51, 51, 0.493); */
 }
 #parentBoutique{
     overflow: hidden;
@@ -58,8 +67,8 @@ html {
     padding-right: 15px;
     border-radius: 10px;
     background-color: rgba(51, 51, 51, 0.493);
-    height: 850px;
-    max-height: 850px;
+    height: 60%;
+    max-height: 60%;
     overflow: auto;
 }
 
