@@ -1,12 +1,10 @@
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    html{
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    html {
         background-image: url(images/backgroundmobile.jpg);
         background-size: auto;
     }
 }
+
 html {
     background-image: url(images/background.jpg);
     background-size: cover;
@@ -26,7 +24,7 @@ html {
     font-size: 20px;
 }
 
-.upgrades{
+.upgrades {
     background-color: rgb(105, 105, 104);
     border-radius: 5px;
     border: 0;
@@ -56,11 +54,12 @@ html {
     /*border-radius: 10px;
     background-color: rgba(51, 51, 51, 0.493); */
 }
-#parentBoutique{
+
+#parentBoutique {
     overflow: hidden;
 }
 
-#boutique{
+#boutique {
     float: right;
     font-size: 20px;
     padding: 20px;
@@ -83,7 +82,7 @@ html {
     height: 250px;
 }
 
-#tuto{
+#tuto {
     font-size: 20px;
 }
 
