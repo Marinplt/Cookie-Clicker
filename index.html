@@ -10,27 +10,32 @@
 </head>
 
 <body>
+    <!-- bouton pour recuperer les cookies ou autre objet -->
     <a href="#" onclick="add()"><img src="images/bitcoin.png" id="image"></a>
 
     <div id="infos">
+        <!-- bloc infos avec le nom et le nombre de recompenses obtenues -->
         <h1 class="Montserrat">Stone Miner</h1>
         <p class="Montserrat">Nombre de Pierres minées :</p>
         <input type="text" id="text" class="Montserrat" value=0 disabled></input>
 
         <p id="pierresPerSecond">Vous gagnez 0 pierres par seconde</p>
-
+        <!-- bouton sauvegarde qui sauvegarde en local la page ainsi que toutes les opérations réalisées en js -->
         <button class="saveloadmulti" onclick="save()"><a class="txtDecorationNone" href="#">Sauvegarder</a></button>
-
+        <!-- idem qu'au dessus mais version chargement, on va recuperer les valeurs précedemment sauvegardée -->
         <button class="saveloadmulti" onclick="load()"><a class="txtDecorationNone" href="#">Charger</a></button>
 
         <p id="currentMultiplier">Multiplicateur actuel : x1</p>
+        <!-- aide au cas ou la personne ne soit pas familière avec les clickers -->
         <p id="tuto">
             Cliquez sur la pierre au centre pour avoir de la pierre.
             <br><br> Cliquez sur les images à droite pour acheter l'objet.
         </p>
     </div>
+    <!-- boutique du jeu -->
     <div id="parentBoutique">
         <div id="boutique">
+            <!-- les améliorations ou multiplicateurs disponibles -->
             <p id="ammountMultiplier">Prochaine amélioration : x2</p>
             <button class="saveloadmulti" onclick="buyMultiplier()"><a class="txtDecorationNone" href="#"><span id="ammountMultiplier2">x2</span></a></button>
             <p id="costMultiplier">Prix : 200 Pierres</p>

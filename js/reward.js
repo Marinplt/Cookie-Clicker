@@ -137,7 +137,7 @@ function update() {
 
     //--------------------------------Tractopelle-----------------------------------------------------
 
-    $("#ammountTractopelle")[0].innerHTML = "Vous possédez " + tractopelle + " Serveurs";
+    $("#ammountTractopelle")[0].innerHTML = "Vous possédez " + tractopelle + " Tractopelles";
     $("#costTractopelle")[0].innerHTML = "Prix : " + ((tractopelle + 1) * 60) + " Pierres";
 
     //--------------------------------Server Bay-----------------------------------------------------
@@ -149,4 +149,3 @@ function update() {
 
     $("#pierresPerSecond")[0].innerHTML = "Vous gagnez " + ((((pioche) + (marteauPiqueur * 2) + (tractopelle * 5))) * multiplier) + " Minerais par seconde";
 }
-p
